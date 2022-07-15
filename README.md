@@ -1,6 +1,4 @@
-# Scroll_To_Top
-1
-# On/Off Element Collaps
+# Scroll To Top
 
 ### Use Skills
 
