@@ -6,7 +6,7 @@ scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
 scrollUpSvgPath.style.transition = 'stroke-dashoffset 20ms';
 let getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
-// updateDashoffset
+// ---- ---- updateDashoffset ---- ---- //
 let updateDashoffset = () => {
   let height = document.documentElement.scrollHeight - window.innerHeight;
   let dashoffset = pathLength - (getTop() * pathLength) / height;
@@ -14,7 +14,7 @@ let updateDashoffset = () => {
   scrollUpSvgPath.style.strokeDashoffset = dashoffset;
 };
 
-// onScroll
+// ---- ---- onScroll ---- ---- //
 window.addEventListener('scroll', () => {
   updateDashoffset();
   if (getTop() > offset) {
@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// click
+// ---- ---- click ---- ---- //
 scrollUp.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
